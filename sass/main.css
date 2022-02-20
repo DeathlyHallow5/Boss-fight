@@ -237,6 +237,20 @@ nav {
           transform: translate(35%);
 }
 
+.medias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.medias img {
+  height: 7vh;
+  margin-left: 1vh;
+}
+
 .carousel-text {
   text-align: center;
 }
