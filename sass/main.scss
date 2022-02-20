@@ -1,0 +1,410 @@
+$red: #F53838;
+$mainColor: #F6F6F6;
+$secondary: #4F5665; 
+$dark: #0B132A;
+$rubik: 'Rubik', sans-serif;
+$gray: #4F5665;
+$red-btn: #F53838;
+
+@mixin textCss($Color, $fWeight, $fSize, $lHeight){
+    font-style: normal;
+    font-weight: $fWeight;
+    font-size: $fSize;
+    line-height: $lHeight;
+
+    color: $Color;
+}
+
+@mixin button($padding, $radius, $border, $bgColor){
+    padding: $padding;
+    border-radius: $radius;
+    border: $border;
+    background-color: $bgColor;
+}
+
+#clickedBtn{
+    @include button(13px 62px, 50px, 2px solid #F53855, #F53855);
+    color: #FFFFFF;
+    -webkit-box-shadow: 0px 18px 54px 0px rgba(245, 56, 56, 0.35);
+    -moz-box-shadow: 0px 18px 54px 0px rgba(245, 56, 56, 0.35);
+    box-shadow: 0px 18px 54px 0px rgba(245, 56, 56, 0.35);
+}
+
+body{
+    font-family: 'Rubik', sans-serif !important;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.sBack{
+    background-color: #F6F6F6;
+    padding-bottom: 200px;
+}
+
+nav{
+    margin-top: 45px;
+}
+
+.info{
+    text-align: center;
+    padding-top: 8px;
+}
+.info a{
+    text-decoration:none;
+    padding: 0px 20px 0 20px;
+    @include textCss($secondary, normal, 16px, 19px);
+}
+.info a:hover{
+    color: $dark;
+    text-decoration: underline;
+}
+
+.sign{
+    text-align: right;
+    padding-top: 7px;
+}
+
+.sign .in{
+    text-decoration:none;
+    padding-right: 30px;
+    @include textCss($secondary, 500, 16px, 19px);
+}
+
+.sign .up{
+    text-decoration:none;
+    @include button(13px 45px, 50px, 2px solid #F53855, none);
+    @include textCss($red, 500, 16px, 19px);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.sign .up:hover{
+    background-color: $red;
+    color: $mainColor;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    .header-infoblok {
+        margin-left: 85px;
+        box-sizing: border-box;
+        p {
+            font-size: 40px;
+        }
+        h5 {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #4F5665;
+        }
+        button {
+            margin-top: 100px;
+            width: 250px;
+            height: 60px;
+            background-color: $red;
+            box-shadow: 2px 5px 15px #fc2c2c;
+        }
+    }
+}
+
+.statistic {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 120px;
+}
+
+.opportunities {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 150px;
+    .opporText {
+        display: block;
+    }
+    .chek img, .chek p {
+        display: inline-block;
+        padding: 5px 0;
+    }
+}
+
+.plan {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    .planText {
+        display: flex;
+        flex-direction: column;
+        p {
+            margin-top: 15px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+    }
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 200px;
+    margin-right: 200px;
+    .card {
+        width: 330px;
+        height: 760px;
+        border: 1px solid #d1d1d1;
+        margin-right: 10px;
+    }
+}
+
+.card-body {
+    text-align: center;
+    img {
+        padding-top: 50px;
+    }
+    h5 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    p {
+        text-align: left;
+        padding-left: 50px;
+    }
+    h1 {
+        padding-top: 80px;
+        padding-bottom: 20px;
+        font-size: 25px;
+    }
+    button {
+        width: 177.88px;
+        height: 45px;
+        border-radius: 50px;
+    }
+}
+
+.map-text {
+    margin-top: 100px;
+    text-align: center;
+    p {
+        font-size: 16px;
+        text-align: center;
+        color: #4F5665;
+    }
+}
+.map-img {
+    text-align: center;
+    padding-top: 170px;
+}
+
+.carousel-text {
+    text-align: center;
+    p {
+    text-align: center;
+    color: #4F5665;
+    }
+}
+.carousel-card {
+    height: 250px;
+    width: 500px;
+    overflow: hidden;
+    margin: 30px auto;
+}
+.carousel-track {
+    display: flex;
+    justify-content: space-around;
+    width: 1300px;
+    height: 270px;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+.card-carousel1 {
+    background: #FFFFFF;
+    border: 2px solid $red;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 400px;
+    height: 230px;
+    span {
+        color: gold;
+    }
+    .card-body-carousel1 {
+        img {
+            padding-left: 30px;
+            padding-top: 30px;
+        }
+        p {
+            display: inline;
+            padding-left: 130px;
+        }
+        h5 {
+            display: inline;
+            padding-left: 10px;
+        }
+        h4 {
+            padding-top: 30px;
+            font-size: 16px;
+            color: #0B132A;
+            text-align: center;
+        }
+    }
+}
+.card-carousel2 {
+    background: #FFFFFF;
+    border: 2px solid $red;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 400px;
+    height: 230px;
+    span {
+        color: gold;
+    }
+    .card-body-carousel2 {
+        img {
+            padding-left: 30px;
+            padding-top: 30px;
+        }
+        p {
+            display: inline;
+            padding-left: 120px;
+        }
+        h5 {
+            display: inline;
+            padding-left: 10px;
+        }
+        h4 {
+            padding-top: 30px;
+            font-size: 16px;
+            color: #0B132A;
+            text-align: center;
+        }
+    }
+}
+
+.card-carousel3 {
+    background: #FFFFFF;
+    border: 2px solid $red;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 400px;
+    height: 230px;
+    span {
+        color: gold;
+    }
+    .card-body-carousel3 {
+        img {
+            padding-left: 30px;
+            padding-top: 30px;
+        }
+        p {
+            display: inline;
+            padding-left: 115px;
+        }
+        h5 {
+            display: inline;
+            padding-left: 10px;
+        }
+        h4 {
+            padding-top: 30px;
+            font-size: 16px;
+            color: #0B132A;
+            text-align: center;
+        }
+    }
+}
+
+.pagination {
+    text-align: center;
+}
+.prew-item {
+    margin-right: 10px;
+}
+
+
+.subscribe {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1140px;
+    margin: auto;
+    height: 233px;
+    margin-top: 100px;
+    border: 2px solid #999ea8;
+    border-radius: 10px;
+    position: relative;
+    .subscribe-content {
+        button {
+            width: 250px;
+            height: 60px;
+            box-shadow: 2px 5px 20px #F53838;
+            top: 70px;
+            right: 100px;
+            position: absolute;
+        }
+        p {
+            font-size: 16px;
+            margin-left: 70px;
+            right: 750px;
+            top: 150px;
+            position: absolute;
+        }
+        h1 {
+            font-size: 35px;
+            margin-top: 58px; 
+            margin-left: 70px;
+            right: 700px;
+            position: absolute;
+        }
+    }
+}
+
+footer {
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-logo {
+    margin-top: 55px;
+    margin-left: 65px;
+    img {
+        padding-bottom: 7px;
+    }
+    .img-logo {
+        margin-top: 30px;
+    }
+    h4 {
+        padding-top: 20px;
+        font-size: 20px;
+        display: inline-block;
+    }
+    h5 {
+        font-size: 16px;
+        text-align: left;
+        color: #AFB5C0;
+    }
+    p {
+        display: inline;
+    }
+}
+.footer-text {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 55px;
+    margin-right: 20px;
+    ul {
+        padding-right: 20px;
+        list-style: none;
+    }
+    li {
+        h2 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.cardjs {
+    width: 330px;
+    height: 760px;
+    border: 3px solid #F53838;
+}
+
+
