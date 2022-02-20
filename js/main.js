@@ -1,38 +1,33 @@
-let offset = 0;
+let set = 0;
+let cardBody = document.querySelector('.card-body');
+let CardButton = document.querySelectorAll('.button-card');
 const track = document.querySelector('.carousel-track');
 const next = document.querySelector('.next-item');
 const prew = document.querySelector('.prew-item');
 
 next.addEventListener('click', function() {
-    offset = offset + 400;
-    if (offset > 900) {
-        offset = 0;
+    set = set + 400;
+    if (set > 900) {
+        set = 0;
     }
-    track.style.left = -offset + `px`;
+    track.style.left = -set + `px`;
 });
 
 prew.addEventListener('click', function() {
-    offset = offset - 450;
-    if (offset < 0) {
-        offset = 900;
+    set = set - 450;
+    if (set < 0) {
+        set = 900;
     }
-    track.style.left = -offset + `px`;
+    track.style.left = -set + `px`;
 });
 
-
-let cardBody = document.querySelector('.card-body');
-
-let buttonCard = document.querySelectorAll('.button-card');
-
-console.log(buttonCard);
-
-for (let i = 0; i < buttonCard.length; i++) {
-    buttonCard[i].addEventListener('click', function(event) {  
+for (let i = 0; i < CardButton.length; i++) {
+    CardButton[i].addEventListener('click', function(event) {  
         let cardJs = document.querySelector('.cardjs');
         if (cardJs !== null) {
             cardJs.classList.remove('cardjs');
         }
-        buttonCard[i].parentNode.classList.add('cardjs');
-        console.log(buttonCard[i].parentNode);
+        CardButton[i].parentNode.classList.add('cardjs');
+        console.log(CardButton[i].parentNode);
     });
 };
