@@ -197,6 +197,15 @@ nav {
   transform: translate(35%);
 }
 
+.medias {
+    display: flex;
+    justify-content: center;
+    img {
+        height: 7vh;
+        margin-left: 1vh;
+    }
+}
+
 .carousel-text {
   text-align: center;
   p {
